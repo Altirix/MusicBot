@@ -1986,7 +1986,7 @@ class MusicBot(discord.Client):
         moving = before == before.server.me
 
         auto_paused = self.server_specific_data[after.server]['auto_paused']
-        player = await self.get_player(my_voice_channel, author=False)
+        player = await self.get_player(my_voice_channel)
 
         if after == after.server.me and after.voice_channel:
             player.voice_client.channel = after.voice_channel
